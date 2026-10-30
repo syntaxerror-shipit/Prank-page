@@ -1,0 +1,84 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Surprise! ❤️</title><style>
+    body {
+        background: #10001f;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+        color: white;
+    }
+
+    h1 {
+        color: #ff4de8;
+        font-size: 40px;
+        text-shadow:
+            0 0 5px #ff4de8,
+            0 0 10px #ff4de8,
+            0 0 20px #ff00cc,
+            0 0 40px #ff00cc;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 5px #ff4de8,
+                         0 0 10px #ff4de8;
+        }
+        to {
+            text-shadow: 0 0 20px #ff4de8,
+                         0 0 40px #ff00cc,
+                         0 0 60px #ff00cc;
+        }
+    }
+
+    button {
+        background: #ff4de8;
+        color: white;
+        border: none;
+        padding: 18px 30px;
+        border-radius: 30px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 0 20px #ff4de8;
+    }
+
+    #message {
+        display: none;
+        margin-top: 40px;
+        animation: appear 1s;
+    }
+
+    @keyframes appear {
+        from { transform: scale(0); }
+        to { transform: scale(1); }
+    }
+
+    p {
+        font-size: 20px;
+    }
+</style>
+
+</head><body><h1>🎁 YOU HAVE A SURPRISE! 🎁</h1>
+
+<p>Someone has prepared something special for you...</p>
+
+<button onclick="reveal()">
+    OPEN YOUR SURPRISE ❤️
+</button>
+
+<div id="message">
+    <h1>😂 YOU GOT PRANKED! 😂</h1>
+    <p>HAHAHAHA! 🤣</p>
+    <p>Don't be angry! You're awesome! ❤️</p>
+    <h1>✨ SURPRISE! ✨</h1>
+</div>
+
+<script>
+    function reveal() {
+        document.getElementById("message").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
